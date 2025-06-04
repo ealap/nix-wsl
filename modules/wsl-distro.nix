@@ -23,7 +23,7 @@ in
     };
     defaultUser = mkOption {
       type = str;
-      default = "nixos";
+      default = "ealap";
       description = "The name of the default user";
     };
     populateBin = mkOption {

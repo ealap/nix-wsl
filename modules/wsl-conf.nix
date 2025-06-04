@@ -72,7 +72,7 @@ with lib; {
             };
             appendWindowsPath = mkOption {
               type = types.bool;
-              default = true;
+              default = false;
               description = "Include the Windows PATH in the PATH variable";
             };
           };
@@ -89,7 +89,7 @@ with lib; {
             };
             hostname = mkOption {
               type = types.str;
-              default = config.networking.hostName;
+              default = "algn1";
               defaultText = "config.networking.hostName";
               description = "The hostname of the WSL instance";
             };
@@ -97,7 +97,7 @@ with lib; {
           user = {
             default = mkOption {
               type = types.str;
-              default = "root";
+              default = "ealap";
               description = "Which user to start commands in this WSL distro as";
             };
           };
