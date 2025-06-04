@@ -28,12 +28,12 @@ let
     { config, lib, pkgs, ... }:
 
     {
-      imports = [ ];
+      imports = [ <nixos-wsl/modules> ];
 
-      nix.settings = {
+      nix.settings.experimental-features = [
         "flakes"
         "nix-command"
-      };
+      ];
 
       wsl.enable = true;
       wsl.defaultUser = "${config.wsl.defaultUser}";
