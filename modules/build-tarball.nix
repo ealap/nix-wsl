@@ -38,6 +38,7 @@ let
       wsl.enable = true;
       wsl.defaultUser = "${config.wsl.defaultUser}";
       wsl.defaultUser = "ealap";
+      wsl.wslConf.network.hostname = "nixos";
 
       system.stateVersion = "${config.system.nixos.release}";
     }
