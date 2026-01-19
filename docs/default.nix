@@ -1,17 +1,15 @@
 { stdenv
-, lib
 , path
-, system
 , runCommand
 , mdbook
 , gnused
 , nixosOptionsDoc
 }:
 
-with lib;
+
 let
   eval = import (path + "/nixos/lib/eval-config.nix") {
-    inherit system;
+    system = stdenv.hostPlatform.system;
     modules = [
       ../modules
     ];
