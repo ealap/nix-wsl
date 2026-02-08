@@ -77,6 +77,7 @@
         {
           nixpkgs-fmt = pkgs.callPackage ./checks/nixpkgs-fmt.nix args;
           nixpkgs-input = pkgs.callPackage ./checks/nixpkgs-input.nix args;
+          options-doc = pkgs.callPackage ./checks/options-doc.nix args;
           rustfmt = pkgs.callPackage ./checks/rustfmt.nix args;
           side-effects = pkgs.callPackage ./checks/side-effects.nix args;
           username = pkgs.callPackage ./checks/username.nix args;
